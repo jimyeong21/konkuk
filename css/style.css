@@ -1,0 +1,37 @@
+.wrap {
+  font-size: 2.2rem;
+}
+.main-section {
+  max-width: 177rem;
+  padding: 13rem 5rem;
+} 
+.main-today {
+  display: flex;
+  gap: 13.5rem;
+  background: url(../images/bg-main-k.png) right 2rem center / 46% no-repeat;
+}
+.main-today > div {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 50rem);
+}
+.main-today > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 50rem;
+}
+.main-today > ul > li + li {
+  margin-top: 7.7rem;
+}
+.main-today > ul > li > img {
+  margin-left: auto;
+}
+.txt-today {    
+  width: auto;
+  height: 34.5rem;
+}
+.img-today {
+  min-width: 52rem;
+  height: 100%;
+}
