@@ -1,12 +1,16 @@
-.wrap {
+.wrap.main-b {
     width: 100%;
     font-size: 2rem;
     overflow-x: hidden;
 }
+.main-b .mo{
+    display: none;
+}
 .main-b .visual{
     position: relative;
-    height: 83.2rem;
-    background: url('../images/bg-mainB-visual.png') no-repeat 50% 50% / cover;
+}
+.main-b .visual > img{
+    width: 100%;
 }
 .main-b .quick-menu{
     position: absolute;
@@ -131,12 +135,27 @@
     max-width: 63.5rem;
     width: 100%;
 }
-.main-b .wrap02{
-    height: 141rem;
-    margin-top: -0.8rem;
+.main-b .wrap01 .content{
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    left:0;
+    bottom:0;
+    height: calc(100% - 40.4rem);
+}
+.main-b .wrap01 .content .box-txt{
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+.main-b .wrap01 .content .box-btn{
+    height: 12.5rem;
 }
 .main-b .wrap02 .video{
     width: 100%;
+}
+.main-b .wrap02 .video > img{
+    width: 100%;;
 }
 .main-b .wrap-calendar{
     position: relative;
@@ -160,12 +179,22 @@
     gap:2.3rem;
 }
 .main-b .wrap-calendar li{
-    flex:1;
+    position: relative;
+    min-width: 31rem;
+    width: calc((100% - 6rem)/4);
     padding:4rem;
     border: 1px solid #D1D1D1;
     background: #FFF;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+.main-b .wrap-calendar li:hover{
+    box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.14);
 }
 .main-b .wrap-calendar li > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.2rem;
     color: #00713B;
     font-family: Pretendard;
     font-size: 3.2rem;
@@ -184,16 +213,22 @@
     letter-spacing: -0.064rem;
 }
 .main-b .wrap-calendar li p{
+    position: relative;
+    width:100%;
+    padding-left: 0.9rem;
     color: #555;
     font-family: Pretendard;
     font-style: normal;
     font-weight: 400;
     line-height: 3.6rem;
     letter-spacing: -0.04rem;
+    transition: all 0.2s ease 0s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.main-b .wrap-calendar li p{
-    position: relative;
-    padding-left: 0.9rem;
+.main-b .wrap-calendar li:hover p{
+    text-decoration: underline;
 }
 .main-b .wrap-calendar li p::before{
     content: "";
@@ -208,8 +243,20 @@
     background: #006B37;
 
 }
+.main-b .wrap-calendar li span + p,.main-b .wrap-calendar li div + p{
+    margin-top:3rem;
+}
 .main-b .wrap03{
     padding-top: 10.3rem;
     padding-bottom: 14rem;
     
+}
+@media screen and (max-width:900px){
+    .main-b .mo{
+        display:block;
+        width: 100%;
+    }
+    .main-b > *{
+        display: none;
+    }
 }
