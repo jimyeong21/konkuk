@@ -11,7 +11,7 @@
   <title>대표 A-type 메인페이지</title>
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap main-typeA-pc">
     <section class="main-visual">
       <img src="../images/img-typeA-gnb.png" alt="" class="gnb-typeA">
       <div class="swiper visual-slide">
@@ -54,6 +54,53 @@
         <div class="visual-button-prev"><img src="../images/btn-typeA-slide.png" alt=""></div>
         <div class="visual-pagination"></div>
         <div class="visual-button-next"><img src="../images/btn-typeA-slide.png" alt=""></div>
+      </div>
+      <div class="user-menu">
+         <img src="../images/btn-user-menu.png" alt="">
+         <p>
+          <span>USER&nbsp;</span>
+          MENU
+         </p>
+         <ul class="user-depth01">
+          <li class="on">
+            <a href="">재학생</a>
+            <ul class="user-depth02">
+              <li>
+                <a href="#n">· 입학안내</a>
+              </li>
+              <li>
+                <a href="#n">· 학과정보</a>
+              </li>
+              <li>
+                <a href="#n">· 대학원정보</a>
+              </li>
+              <li>
+                <a href="#n">· 장학안내</a>
+              </li>
+              <li>
+                <a href="#n">· 생활관</a>
+              </li>
+              <li>
+                <a href="#n">· 캠퍼스맵</a>
+              </li>
+              <li>
+                <a href="#n">· 오시는 길</a>
+              </li>
+              <li>
+                <a href="#n">· 주차장 안내</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">예비신입생</a>
+          </li>
+          <li>
+            <a href="">방문객</a>
+          </li>
+          <li>
+            <a href="">교직원</a>
+          </li>
+         </ul>
       </div>
     </section>
     <section class="main-section main-today">
@@ -264,12 +311,17 @@
       <img src="../images/img-footer.png" alt="">
     </footer>
   </div>
+  <div class="main-typeA-mo">
+    <img src="../images/img-typeA-main_mo.png" alt="">
+  </div>
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="../js/main.js"></script>
   <script>
     AOS.init();
+
+    $()
 
     const swiper00 = new Swiper(".visual-slide", {
       slidesPerView: 1,

@@ -15,7 +15,106 @@
     top: 0;
   } 
 }
-
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 32.4rem;
+  right: 0;
+  padding: 1.7rem 2.5rem 1.7rem 1.7rem;
+  width: 16rem;
+  border-radius: 10rem 0rem 0rem 10rem;
+  background: #00723F;
+  z-index: 10;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}
+.user-menu > p {
+  color: #FFF;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 2.2rem;
+  text-transform: uppercase;    
+}
+.user-menu.open {
+  width: 40rem;
+}
+.user-menu.open > p {
+  display: flex;
+}
+.user-depth01 {
+  position: absolute;
+  top: 100%;    
+  right: 0;
+}
+.user-depth01 > li > a {
+  display: block;
+  padding: 3rem 0 3rem 6.8rem;
+  min-width: 18rem;
+  color: #222;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: -0.036rem;
+  background: #FFF;
+  border-bottom: 1px solid #EAEAEA;
+}
+.user-depth01 > li {
+  position: relative;
+}
+.user-depth01 > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.8rem;
+  height: 100%;
+  background: #333333;
+  z-index: 1;
+}
+.user-depth01 > li:hover::before,
+.user-depth01 > li.on::before {
+  background: #42B41A;
+}
+.user-depth01 > li > a {
+  position: relative;
+}
+.user-depth01 > li.on > a,
+.user-depth01 > li > a:hover {
+  text-decoration-line: underline;
+  font-weight: 600;
+}
+.user-depth02 {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  padding: 2.6rem 3rem;
+  width: 18rem;
+  background: #333;
+}
+.user-depth02 > li {
+}
+.user-depth02 > li > a {
+  display: block;
+  padding: 0.7rem 0;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: -0.036rem;
+}
+.user-menu img {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+.user-menu > p > span {
+  color: #42FF00;
+}
+.main-typeA-mo {
+  display: none;
+}
 .wrap {
   font-size: 2.2rem;
 }
@@ -132,7 +231,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 177rem;
-  background: url(../images/bg-main-k.png) right 2rem center / 46% no-repeat;
+  background: url(../images/bg-main-k.png) right 2rem center / 47% no-repeat;
 }
 .main-today > div {
   display: flex;
@@ -477,4 +576,18 @@
 .footer {
   padding: 3rem 3.5rem;
   background: url(../images/bg-footer.png) right -25% top 0 / 50% auto no-repeat;
+}
+
+
+@media screen and (max-width:768px) {
+  .main-typeA-mo {
+    display: block;
+  }
+  .main-typeA-pc {
+    display: none;
+  }
+  .main-typeA-mo > img {
+    width: 100%;
+    height: auto;
+  }
 }
