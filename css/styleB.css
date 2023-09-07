@@ -1,0 +1,215 @@
+.wrap {
+    width: 100%;
+    font-size: 2rem;
+    overflow-x: hidden;
+}
+.main-b .visual{
+    position: relative;
+    height: 83.2rem;
+    background: url('../images/bg-mainB-visual.png') no-repeat 50% 50% / cover;
+}
+.main-b .quick-menu{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 12rem;
+    height: 29.7rem;
+}
+.main-b .quick-menu .sub-gnb{
+    position: absolute;
+    top:9.7rem;
+    left:-98%;
+    width: 13.4rem;
+    opacity: 0;
+    transition: all .3s ease 0s;
+    pointer-events: none;
+}
+.main-b .quick-menu:hover .sub-gnb{
+    opacity: 1;
+    pointer-events: auto;
+}
+.main-b .wrap01, .main-b .wrap02{
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+.main-b .wrap01{
+    height: 99.6rem;
+}
+.main-b .right{
+    position: relative;
+    width: calC(100vw - 35rem);
+    height: 100%;
+}
+.main-b .left{
+    position: relative;
+    width: 35rem;
+}
+.main-b .left img{
+    position: absolute;
+    right: 0;
+    width: 29.1rem;
+}
+.main-b .wrap01 .left img{
+    top:7rem;
+}
+.main-b .wrap01 .right{
+    background: url('../images/bg-mainB-wrap01.png') no-repeat 50% 50% / 100% 100%;
+}
+.main-b .notice{
+    display: flex;
+    position: absolute;
+    top:0;
+    right: 0;
+    max-width: 100%;
+    background: #fff;
+}
+.main-b .notice ul{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 41.3rem;
+    padding: 5.1rem 5rem 4.7rem;
+}
+.main-b .notice ul::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:50%;
+    right:0;
+    width:0.1rem;
+    height: 30rem;
+    transform: translatey(-50%);
+    background: rgba(0, 0, 0, 0.20);;
+}
+.main-b .notice ul li{
+    position: relative;
+    width: 50%;
+    text-align: center;
+    border-top: 0.1rem solid #D9D9D9;
+    color: #666;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6rem; /* 300% */
+    letter-spacing: 0.04rem;
+    cursor: pointer;
+}
+.main-b .notice ul li:nth-of-type(2n){
+    border-left: 0.1rem solid #D9D9D9;
+}
+.main-b .notice ul li:nth-last-of-type(2),.main-b .notice ul li:nth-last-of-type(1){
+    border-bottom: 0.1rem solid #D9D9D9;
+}
+.main-b .notice ul li:hover{
+    color: #222;
+    font-weight: 600;
+}
+.main-b .notice ul li::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border:0.2rem solid #222;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s linear 0s;
+}
+.main-b .notice ul li:hover::Before{
+    opacity: 1;
+}
+.main-b .notice-cont{
+    flex:1;
+    padding: 5.1rem 5.4rem;
+    background: url('../images/img-mainB-notice.png') no-repeat 100% 100% / auto 7rem;
+}
+.main-b .notice-cont img{
+    max-width: 63.5rem;
+    width: 100%;
+}
+.main-b .wrap02{
+    height: 141rem;
+    margin-top: -0.8rem;
+}
+.main-b .wrap02 .video{
+    width: 100%;
+}
+.main-b .wrap-calendar{
+    position: relative;
+    padding:7rem;
+    border-bottom: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;
+    background: #FAFAFA;
+}
+.main-b .wrap-calendar .btn-slide{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 20.9rem;
+}
+.main-b .wrap-calendar .tit{
+    width: 26.5rem;
+    margin-bottom: 3rem;
+}
+.main-b .wrap-calendar ul{
+    display: flex;
+    gap:2.3rem;
+}
+.main-b .wrap-calendar li{
+    flex:1;
+    padding:4rem;
+    border: 1px solid #D1D1D1;
+    background: #FFF;
+}
+.main-b .wrap-calendar li > div{
+    color: #00713B;
+    font-family: Pretendard;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -0.064rem;
+}
+.main-b .wrap-calendar li span{
+    color: #00713B;
+    font-family: Pretendard;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.064rem;
+}
+.main-b .wrap-calendar li p{
+    color: #555;
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.6rem;
+    letter-spacing: -0.04rem;
+}
+.main-b .wrap-calendar li p{
+    position: relative;
+    padding-left: 0.9rem;
+}
+.main-b .wrap-calendar li p::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:50%;
+    left:0;
+    width: 0.3rem;
+    height: 0.3rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #006B37;
+
+}
+.main-b .wrap03{
+    padding-top: 10.3rem;
+    padding-bottom: 14rem;
+    
+}
