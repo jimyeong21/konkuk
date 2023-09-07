@@ -69,7 +69,8 @@
 }
 .visual-txt > p > span.ball {
   position: relative;
-  animation: ball 1s ease-in Alternate;
+  animation: ball 1s ease-in Alternate; 
+  animation-delay: 1.5s;
 }
 .visual-slide .swiper-slide {
   height: 100vh;
@@ -121,7 +122,7 @@
   line-height: 1;
 }
 .main-section {
-  padding: 8% 5rem;
+  padding: 7% 5rem;
 } 
 .inner-1670 {
   margin: 0 auto;
@@ -263,19 +264,21 @@
   padding: 0 0 8% 0;
   background: #F3F4F4;
 }
-.main-program .inner-1670 {
+.main-program > div {
   position: relative;
-}
-.main-program .inner-1670 > div {
   display: flex;
-  position: relative;
   left: 0;
 }
 .main-program .txt-program {
   max-width: 37%;
 }
 .program-slide {    
-  padding-left: 5% !important;
+  margin-left: 5% !important;
+}
+.program-slide .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .main-program .btn-main-slide {
   position: absolute;

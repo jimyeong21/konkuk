@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="../css/reset.css"> 
   <link rel="stylesheet" href="../css/style.css"> 
-  <link rel="stylesheet" href="../css/swiper.min.css">
   <title>대표 A-type 메인페이지</title>
 </head>
 <body>
@@ -18,8 +19,8 @@
           <a class="swiper-slide" href="#n">
             <img src="../images/img-typeA-visual01.png" alt="">
             <div class="visual-txt">
-              <p><span>건국대학교</span>에서 학생들의 <span class="ball">상상</span>은 현실이 됩니다</p>
-              <h1>Celebrating 86 years<br>
+              <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="700"><span>건국대학교</span>에서 학생들의 <span class="ball">상상</span>은 현실이 됩니다</p>
+              <h1 data-aos="fade-up" data-aos-delay="800" data-aos-duration="700">Celebrating 86 years<br>
                 of academic excellence</h1>
             </div>
           </a>
@@ -113,7 +114,6 @@
       </div>
     </section>
     <section class="main-section main-program">
-      <div class="inner-1670">
         <div>
           <img src="../images/img-main-program.png" alt="" class="txt-program">
           <div class="swiper program-slide">
@@ -122,7 +122,7 @@
                 <img src="../images/img-main-program02.png" alt="">
               </a>
               <a class="swiper-slide" href="#n">
-                <img src="../images/img-main-program02.png" alt="">
+                <img src="../images/img-typeA-visual01.png" alt="">
               </a>
             </div>
           </div>
@@ -131,7 +131,6 @@
             <div class="swiper-button-prev program-button-prev"><img src="../images/btn-main-slide.png" alt=""></div>
           </div>
         </div>
-      </div>
     </section>
     <section class="main-section main-calendar">
       <div class="inner-1670">
@@ -150,7 +149,7 @@
         <div class="swiper calendar-slide">
           <div class="swiper-pagination calendar-pagination"></div>
           <div class="swiper-wrapper">
-            <a class="swiper-slide" href="#n">
+            <a class="swiper-slide" href="#n>
               <span class="c-month">SEP</span>
               <span class="c-day">11</span>
               <p class="c-tit">2023학년도 2학기<br>
@@ -267,10 +266,19 @@
   </div>
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../js/main.js"></script>
   <script>
+    AOS.init();
+
     const swiper00 = new Swiper(".visual-slide", {
       slidesPerView: 1,
-      spaceBetween: 0,
+      autoplay: {
+        delay: 4000,
+      },
+      speed : 1000,
+      effect : 'fade',
+      loop : true,
       navigation: {
         nextEl: ".visual-button-next",
         prevEl: ".visual-button-prev",
