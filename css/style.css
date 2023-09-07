@@ -2,14 +2,14 @@
   0% {
     top: 0;
   }
-  50% {
-    top:-10rem;
+  40% {
+    top:-5rem;
   }
-  75% {
+  65% {
     top:0;
   }
-  90% {
-    top: -5rem;
+  80% {
+    top: -3rem;
   }
   to {
     top: 0;
@@ -67,10 +67,10 @@
   color: #42FF00;
   font-weight: 700; 
 }
-/* .visual-txt > p > span.ball {
+.visual-txt > p > span.ball {
   position: relative;
-  animation: ball 2s ease-in Alternate;
-} */
+  animation: ball 1s ease-in Alternate;
+}
 .visual-slide .swiper-slide {
   height: 100vh;
 }
