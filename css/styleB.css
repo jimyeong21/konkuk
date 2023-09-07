@@ -1,3 +1,4 @@
+/* main-B */
 .wrap.main-b {
     width: 100%;
     font-size: 2rem;
@@ -260,3 +261,18 @@
         display: none;
     }
 }
+/* //main-B */
+.sub-b .mo{
+    display: none;
+}
+/* sub-B */
+@media screen and (max-width:900px){
+    .sub-b .mo{
+        display:block;
+        width: 100%;
+    }
+    .sub-b > *{
+        display: none;
+    }
+}
+/* //sub-B */
