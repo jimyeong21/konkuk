@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css"> 
+    <link rel="stylesheet" href="../css/styleB-kwu.css"> 
+    <link rel="stylesheet" href="../css/swiper.min.css"> 
+    <title>B-type 02 메인 페이지</title>
+</head>
+<body>
+    <div class="wrap main-b01">
+        <img src="../images/typeB-main02-m.png" class="mo">
+      <div class="pc">
+        <section>
+          <header>
+            <img src="../images/typeB-main01-header.png">
+          </header>
+          <img src="../images/typeB-main01-visual.png">
+        </section>
+        <section>
+          <img src="../images/typeB-main01-visualquick.png">
+          <div>
+            <img src="../images/typeB-main01-notice.png">
+            <div>
+              <ul>
+                <li>대학소식</li>
+                <li>학사공지</li>
+                <li>등록/장학</li>
+                <li>행사·세미나</li>
+                <li>채용공고</li>
+              </ul>
+              <div class="wrap-notice">
+                <div>
+                  <h3>2023년 제3회 한국교원대학교
+                    한시임기제공무원 6호(전산) 경력...</h3>
+                  <p>한국교원대학교에서 한시임기제 6호(전산) 경력경쟁
+                    채용 최종합격자를 다음과 같이 공고합니다. 최종 ...</p>
+                  <span>2023. 09. 09</span>
+                </div>
+                <div>
+                  <h3>한국교원대학교 교육박물관 기간제
+                    근로자[계약직]  채용 공고</h3>
+                  <p>[한국교원대학교 교육박물관 공고 제2023-05호]
+                    한국교원대학교 교육박물관에서 기간제 근로자...</p>
+                  <span>2023. 09. 09</span>
+                </div>
+                <div>
+                  <h3>2023년 제5회 대학회계직 서류전형
+                    합격자 명단 및 면접심사 일정 ...</h3>
+                  <p>한국교원대학교에서 대학회계직(조리종사원) 채용
+                    서류전형 합격자 발표 및 면접시험 일정을 아래와  ...</p>
+                  <span>2023. 09. 09</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <img src="../images/typeB-main01-schedule.png">
+        </section>
+        <section>
+          <img src="../images/typeB-main01-tit.png">
+          <div class="media-swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="../images/slide-media01.png">
+              </li>
+              <li class="swiper-slide">
+                <img src="../images/slide-media02.png">
+              </li>
+              <li class="swiper-slide">
+                <img src="../images/slide-media03.png">
+              </li>
+            </ul>
+          </div>
+          <div class="page-media">
+            <button class="prev"></button>
+            <div class="scroll"></div>
+            <button class="next"></button>
+          </div>
+        </section>
+        <section>
+          <div>
+            <img src="../images/typeB-main01-txt.png">
+          </div>
+        </section>
+        <section></section>
+        <section>
+          <img src="../images/typeB-main01-footer.png">
+        </section>
+      </div>
+    </div>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".media-swiper", {
+      slidesPerView: 2.5,
+      spaceBetween: 54,
+      navigation: {
+        nextEl: ".page-media .next",
+        prevEl: ".page-media .prev",
+      },
+    });
+    </script>
+</body>
+</html>
