@@ -1,112 +1,181 @@
  /* typeA - intro */
 .wrap.intro-a{
+    display: flex;
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: url(../images/bg-intro-a.png) no-repeat 0 0 / 100% 100%;
 }
 .wrap.intro-a .mo{
     display: none;
 }
-.intro-a header{
-    max-width: 186rem;
-    height: 10.8rem;;
-    margin: auto;
-    padding: 0 5rem;
+.intro-a .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 38rem;
+    width: 38rem;
+    padding: 6rem;
 }
 .intro-a header h1{
-    width: 13.2rem;
-    padding-top:2rem;
+    height: 4.4rem;
+}
+.intro-a header h1 img{
+    height: 100%;
+    object-fit: contain;
+}
+.intro-a header ul{
+    margin-top: 11.6rem;
+}
+.intro-a header ul li{
+    padding-bottom: 1.5rem;
+    background: url(../images/ico-arr-right.png) no-repeat 100% 1.2rem / 0.8rem auto;
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    letter-spacing: -0.036rem;
+    border-bottom: 0.1rem solid rgba(34, 34, 34, 0.60);
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+.intro-a header ul li:hover{
+    border-bottom: 0.2rem solid #222;
+    font-weight: 700;
+}
+.intro-a header ul li + li{
+    margin-top: 2.4rem;
+}
+.intro-a footer{
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    letter-spacing: -0.03rem;
+}
+.intro-a footer span{
+    font-weight: 350;
+}
+.intro-a .right{
+    position: relative;
+    flex: 1;
+    padding-top: 7rem;
+    background: #F5F6FA;;
+}
+.intro-a .right::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    height: 20%;
+    background: #021136;
 }
 .intro-a main{
-    max-width: 186rem;
-    margin: auto;
-    padding: 0 5rem;
+    max-width: 154rem;
+    padding: 0 8rem;
 }
 .intro-a .intro-main-t{
     display: flex;
-    gap:7rem;
+    gap:6rem;
 }
 .intro-a .intro-main-t > div{
-    flex: 1;
+    width: 96rem;
 }
 .intro-a .img-sns{
-    max-width: 24.8rem;
+    max-width: 16rem;
 }
 .intro-a .logo-name{
-    max-width: 64.8rem;
-    width: 100%;
+    width: 26rem;
     padding-bottom: 4rem;
+    object-fit: contain;
 }
 .intro-a .intro-main-t .txt{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex:1
 }
 .intro-a .intro-main-t ul{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 4.8rem;
-    row-gap: 2.1rem;
+    width: 100%;
 }
 .intro-a .intro-main-t li{
-    width:calc(50% - 2.4rem);
-    height: 5.1rem;
+    position: relative;
+    padding: 1.2rem 2rem;
+    background: #fff url('../images/ico-blank.png') no-repeat calc(100% - 2rem) 50% / 1.6rem;
     color: #222;
-    font-family: Noto Sans KR;
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 3.6rem; /* 200% */
+    line-height: 3.6rem; 
     letter-spacing: -0.036rem;
-    border-bottom: 0.1rem solid rgba(34, 34, 34, 0.6);
-    background: url(../images/ico-arr-right.png) no-repeat 100% 1.2rem /  0.8rem auto;
     transition: all .2s linear 0s;
     cursor: pointer;
 }
 .intro-a .intro-main-t li:hover{
     font-weight: 700;
-    border-bottom: 0.4rem solid #222;
+    box-shadow: 6px 6px 28px 0px rgba(0, 0, 0, 0.25);
+}
+.intro-a .intro-main-t li + li{
+    margin-top: 1.2rem;
+}
+.intro-a .intro-main-t li::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #001D63;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s ease 0s;
+}
+.intro-a .intro-main-t li:hover::before{
+    opacity: 1;
 }
 .intro-a .intro-main-b{
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    margin-top: 7rem;
+    gap:4rem;
+    position: relative;
+    margin-top: 4rem;
+    z-index: 2;
 }
 .intro-a .intro-main-b img{
-    width: 24rem;
+    width: 21rem;
     object-fit: contain;
 }
 .intro-a .notice{
     display: flex;
-    gap:2rem;
+    gap:4rem;
     flex:1;
 }
 .intro-a .box-notice{
     flex:1;
     padding:2.9rem 4rem;
     background: #fff;;
-    border: 1px solid #F0F0F0;
+    border: 2px solid #F0F0F0;
     box-shadow: 6px 6px 28px 0px rgba(0, 0, 0, 0.06);
     transition: all .3s ease 0s;
     cursor: pointer;
 }
 .intro-a .box-notice:hover{
-    border: 2px solid #00713B;
+    border: 2px solid #001D63;
     box-shadow: 6px 6px 28px 0px rgba(0, 0, 0, 0.25);
     transform: translateY(-4rem);
 }
 .intro-a .box-notice .tag{
-    color: #00713B;
-    font-family: Noto Sans KR;
+    color: #001D63;
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: 3rem; /* 166.667% */
+    line-height: 3rem;
     letter-spacing: -0.036rem;
 }
 .intro-a .box-notice .date{
     color: #999;
-    font-family: Poppins;
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
@@ -116,7 +185,6 @@
     display: -webkit-box;;
     margin: 0.8rem  0 2rem;
     color: #555;
-    font-family: Noto Sans KR;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
@@ -132,29 +200,6 @@
     color: #222;
     font-weight: 500;
     text-decoration-line: underline;
-}
-.intro-a footer{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid #555;
-}
-.intro-a footer p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 186rem;
-    height: 6rem;;
-    margin: auto;
-    padding: 0 5rem;
-    color: #CCC;
-    font-family: Noto Sans KR;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 3rem; /* 187.5% */
-    letter-spacing: -0.032rem;
-    text-align: center;
 }
 @media screen and (max-width:768px) {
     .wrap.intro-a{
@@ -192,7 +237,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - 9.6rem);
+    height: calc(100% - 7rem);
 }
 .intro-b header img{
     width:16rem;
@@ -209,6 +254,7 @@
     gap:2rem;
     max-width: 78rem;
     margin: 0 auto;
+    margin-top: 4rem;
 }
 .intro-b .intro-main-t nav > div{
     position: relative;
@@ -233,7 +279,7 @@
 }
 .intro-b .intro-main-t nav > div:hover{
     backdrop-filter: blur(4px);
-    background:rgba(87, 61, 30, 0.40) url('../images/ico-arr-right03.png') no-repeat calc(100% - 3rem) 3rem / 3rem auto;;
+    background:rgba(49, 168, 255, 0.40) url('../images/ico-arr-right03.png') no-repeat calc(100% - 3rem) 3rem / 3rem auto;;
 }
 .intro-b .intro-main-t nav > div:hover::Before{
     border: 1px solid rgba(255, 255, 255, 0.50);
@@ -352,10 +398,12 @@
     border-left: 0.1rem solid #eaeaea;
 }
 .intro-b footer{
+    height: calc(100% - 79.6rem);
     border-top: 0.1rem solid #eaeaea;
 }
 .intro-b footer img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 @media screen and (max-width:768px) {
