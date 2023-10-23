@@ -606,7 +606,7 @@
   display: none;
 }
 .mo-wrap {
-  width: 76.8rem;
+  max-width: 76.8rem;
   margin: 0 auto;
 }
 .btn-top {
