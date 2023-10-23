@@ -615,10 +615,11 @@
   right: 0;
   bottom: 25rem;
   z-index: 10;
+  transition: opacity .3s ease-in-out;  
 }
 .btn-top.show {      
   opacity: 1;  
-  transition: opacity 1s ease-in-out;     
+  transition: opacity .3s ease-in-out;     
 }
 .btn-top > img {
   width: 8rem;

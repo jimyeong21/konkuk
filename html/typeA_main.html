@@ -402,6 +402,10 @@
         $('.btn-top').removeClass("show");
       }
     })
+
+    $(".btn-top").on("click", function(){
+      $('html').animate({scrollTop: '0'}, 300);
+    })
   </script>
 </body>
 </html>
