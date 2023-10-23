@@ -175,12 +175,17 @@
   animation-delay: 1.5s;
 } */
 .visual-slide .swiper-slide {
+  position: relative;
   height: 100vh;
 }
 .visual-slide .swiper-slide img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.visual-slide .swiper-slide:nth-child(2) .visual-txt {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.3); 
 }
 .visual-slide .swiper-slide h1 {
   color: #FFF;
