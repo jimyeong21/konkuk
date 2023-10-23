@@ -25,7 +25,7 @@
   padding: 1.7rem 2.5rem 1.7rem 1.7rem;
   width: 16rem;
   border-radius: 10rem 0rem 0rem 10rem;
-  background: #00723F;
+  background: #122E7B;
   z-index: 10;
   cursor: pointer;
   transition: width 0.3s ease-in-out;
@@ -80,7 +80,7 @@
   z-index: 1;
 }
 .user-depth01 > li.on::before {
-  background: #42B41A;
+  background: #00E0FF;
 }
 .user-depth01 > li > a {
   position: relative;
@@ -110,9 +110,10 @@
 .user-menu img {
   width: 3.8rem;
   height: 3.8rem;
+  transform: rotate(180deg);
 }
 .user-menu > p > span {
-  color: #42FF00;
+  color: #00E0FF;
 }
 .main-typeA-mo {
   display: none;
@@ -165,21 +166,26 @@
   letter-spacing: -0.052rem;
 }
 .visual-txt > p > span {
-  color: #42FF00;
+  color: #00E0FF;
   font-weight: 700; 
 }
-.visual-txt > p > span.ball {
+/* .visual-txt > p > span.ball {
   position: relative;
   animation: ball 1s ease-in Alternate; 
   animation-delay: 1.5s;
-}
+} */
 .visual-slide .swiper-slide {
+  position: relative;
   height: 100vh;
 }
 .visual-slide .swiper-slide img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.visual-slide .swiper-slide:nth-child(2) .visual-txt {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.3); 
 }
 .visual-slide .swiper-slide h1 {
   color: #FFF;
@@ -190,7 +196,7 @@
 }
 .gnb-typeA {
   position: absolute;
-  width: 100rem;
+  width: 84rem;
   right: 6.5rem;
   top: 4rem;
   z-index: 10;
@@ -217,7 +223,7 @@
 .visual-pagination {
   padding: 0 1.4rem 0 1.8rem;
   width: 9.2rem !important;
-  color: #42B41A !important;
+  color: #2957D7 !important;
   font-weight: 900;
   font-size: 2.7rem;
   line-height: 1;
@@ -231,13 +237,14 @@
 }
 .main-today {
   display: flex;
+  overflow: hidden;
   margin: 0 auto;
   max-width: 177rem;
   background: url(../images/bg-main-k.png) right 2rem center / 47% no-repeat;
 }
 .main-today > div {
-  display: flex;
-  align-items: stretch;
+  display: flex;    
+  align-items: center;
 }
 .main-today .left-box {
   display: flex;    
@@ -318,7 +325,7 @@
   font-weight: 500;
 }
 .related-slide .swiper-slide:hover > span {
-  color: #42B41A;
+  color: #2957D7;
   transition: all 0.3s ease-in-out;
 }
 .related-slide .swiper-slide > span::after  {
@@ -333,7 +340,7 @@
 }
 .related-slide .swiper-slide:hover > span::after {
   width: 100%;
-  background: #42B41A;
+  background: #2957D7;
 }
 .related-slide .swiper-wrapper {
   margin-top: 5rem;
@@ -353,7 +360,7 @@
   background: #333 !important;
 }
 .swiper-pagination-progressbar-fill {
-  background: #42B41A !important;
+  background: #2957D7 !important;
 }
 .swiper-button-prev:after, 
 .swiper-button-next:after {
@@ -378,9 +385,15 @@
 }
 .main-program .txt-program {
   max-width: 37%;
+  background: #F3F4F4;
+  z-index: 10;
 }
 .program-slide {    
-  margin-left: 5% !important;
+  margin-left: 5% !important;    
+}
+.program-slide .swiper-slide {
+  max-width: 87rem;
+  width: 100%;
 }
 .program-slide .swiper-slide img {
   width: 100%;
@@ -402,13 +415,14 @@
   display: flex;
   flex-direction: column;
   padding: 0 4rem;
+  height: auto;
   transition: all 0.3s ease-in-out;
 }
 .calendar-slide .swiper-slide + .swiper-slide {
   border-left: 1px solid #666;
 }
 .calendar-slide .swiper-slide .c-month {
-  color: #00723F;
+  color: #2957D7;
   font-size: 2.5rem;
   font-weight: 600;
 }
@@ -419,7 +433,7 @@
   transition: all 0.3s ease-in-out;
 }
 .calendar-slide .swiper-slide:hover .c-day{
-  color: #00723F;
+  color: #2957D7;
 }
 .calendar-slide .swiper-slide .c-tit {
   position: relative;
@@ -449,6 +463,9 @@
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 4rem;
+}
+.calendar-slide .swiper-slide:hover .c-date{
+  color: #566BA5;
 }
 .main-calendar .m-tit-wrap {
   position: relative;
@@ -532,7 +549,7 @@
 }
 .sns-box .top-area > li.nth02:hover::after,
 .sns-box .top-area > li > div:hover::after {
-  background-color: rgba(0, 114, 63, 0.90);
+  background-color: rgba(41, 87, 215, 0.90);
   z-index: 1;
 }
 .sns-box .top-area > li > div img {
@@ -583,7 +600,7 @@
 }
 .footer {
   padding: 3rem 3.5rem;
-  background: url(../images/bg-footer.png) right -25% top 0 / 50% auto no-repeat;
+  background: url(../images/bg-footer.png) right 0 top 0 / 30% auto no-repeat;
 }
 .img-mo {
   display: none;
@@ -591,6 +608,21 @@
 .mo-wrap {
   width: 76.8rem;
   margin: 0 auto;
+}
+.btn-top {
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  bottom: 25rem;
+  z-index: 10;
+}
+.btn-top.show {      
+  opacity: 1;  
+  transition: opacity 1s ease-in-out;     
+}
+.btn-top > img {
+  width: 8rem;
+  height: auto;
 }
 @media screen and (max-width:768px) {
   .main-typeA-mo {
