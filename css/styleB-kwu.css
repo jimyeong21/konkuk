@@ -20,6 +20,7 @@
 .main-b02 .right{
   flex:1;
   max-width: calc(100% - 18rem);
+  overflow: hidden;
 }
 .main-b02 .right section{
   width: 100%;
@@ -142,8 +143,62 @@
   width: calc(100% + 2px);
   transform: translateX(-2px);
 }
-.section05{
-  
+.main-b02 .section05{
+  position: relative;
+  overflow: hidden;
+  padding:14rem 8rem 0;
+}
+.main-b02 .section05::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 58.7rem;
+  background: #E6E9F0;
+}
+.main-b02 .section05 .tit{
+  position: relative;
+}
+.main-b02 .gallery-swiper{
+  position: relative;
+  margin-top: 5rem;
+}
+.main-b02 .gallery-swiper button{
+  position: absolute;
+  top:50%;
+  width: 5rem;
+  height: 5rem;
+  transform: translateY(-50%);
+}
+.main-b02 .gallery-swiper .prev{
+  left:0;
+  background: url('../images/ico-arr-left02.png') no-repeat 0 0 /100%;
+  z-index: 10;
+}
+.main-b02 .gallery-swiper .next{
+  right:0;
+  background: url('../images/ico-arr-right02.png') no-repeat 0 0 /100%;
+  z-index: 10;
+}
+.main-b02 .gallery-swiper .swiper-slide{
+  position: relative;
+}
+.main-b02 .gallery-swiper .swiper-slide::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 144, 213, 0.60);;
+  opacity: 1;
+  transition: all .3s ease 0s;
+}
+.main-b02 .gallery-swiper .swiper-slide.swiper-slide-active::before{
+  opacity: 0;
 }
 .main-b02 .section06{
   padding: 14rem 8rem;
@@ -151,4 +206,13 @@
 .main-b02 .section07 img{
   width: calc(100% + 2px);
   transform: translateX(-2px);
+}
+@media screen and (max-width:900px){
+  .wrap .mo{
+      display:block;
+      width: 100%;
+  }
+  .wrap .pc{
+      display: none;
+  }
 }

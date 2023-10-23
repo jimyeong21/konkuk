@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css"> 
     <link rel="stylesheet" href="../css/styleB-kwu.css"> 
+    <link rel="stylesheet" href="../css/swiper.min.css"> 
     <title>B-type 02 메인 페이지</title>
 </head>
 <body>
     <div class="wrap main-b02">
-        <img src="" class="mo">
+        <img src="../images/typeB-main02-m.png" class="mo">
       <div class="pc">
         <div class="left">
           <div>
@@ -79,13 +80,23 @@
             <img src="../images/typeB-main02-quick.png">
           </section>
           <section class="section05">
-            <div class="tit"></div>
+            <div class="tit">
+              <img src="../images/typeB-main02-tit02.png">
+            </div>
             <div class="gallery-swiper">
-              <ul class="swiper-wapper">
-                <li>
-                  <img src="">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="../images/typeB-main02-slide.png">
+                </li>
+                <li class="swiper-slide">
+                  <img src="../images/typeB-main02-slide.png">
+                </li>
+                <li class="swiper-slide">
+                  <img src="../images/typeB-main02-slide.png">
                 </li>
               </ul>
+              <button class="prev" type="button"></button>
+              <button class="next" type="button"></button>
             </div>
           </section>
           <section class="section06">
@@ -100,6 +111,15 @@
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script>
+      const swiper = new Swiper(".gallery-swiper", {
+      slidesPerView: 1.4,
+      spaceBetween: 50,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".gallery-swiper .next",
+        prevEl: ".gallery-swiper .prev",
+      },
+    });
     </script>
 </body>
 </html>
