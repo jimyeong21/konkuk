@@ -1,6 +1,13 @@
+$( document ).ready( function() {
 
-let marginTit = $(".main-related .m-tit-wrap").offset().left;
-$(".main-program").css("padding-left",marginTit);
+  let marginTit = $(".main-related .m-tit-wrap").offset().left;
+  $(".main-program").css("padding-left",marginTit);
+
+  $( window ).resize( function() {
+    let marginTit = $(".main-related .m-tit-wrap").offset().left;
+    $(".main-program").css("padding-left",marginTit);
+  });
+});
 
 $(".user-menu").on("mouseenter",function(){
   $(this).addClass("open");
