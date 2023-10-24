@@ -9,13 +9,13 @@ $( document ).ready( function() {
   });
 });
 
-$(".user-menu").on("mouseenter",function(){
+$(".user-menu > a").on("mouseenter",function(){
   $(this).addClass("open");
-  setTimeout("userMenu()",350)
+  setTimeout("userMenu()",300)
 })
-$(".user-menu").on("mouseleave",function(){
+$(".user-menu > a").on("mouseleave",function(){
   $(this).removeClass("open")
-  $(".user-depth01").removeClass("on");
+  $(".user-depth01").fadeOut();
 })
 
 $(".user-depth01 > li").on("click",function(){
@@ -24,5 +24,5 @@ $(".user-depth01 > li").on("click",function(){
 })
 
 function userMenu() {
-  $(".user-depth01").addClass("on");
+  $(".user-depth01").fadeIn();
 }
