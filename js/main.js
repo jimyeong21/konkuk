@@ -10,19 +10,15 @@ $( document ).ready( function() {
 });
 
 $(".user-menu > a").on("mouseenter",function(){
-  $(this).addClass("open");
-  setTimeout("userMenu()",300)
+  $(this).stop().addClass("open");
+  $(".user-depth01").stop().fadeIn();
 })
 $(".user-menu").on("mouseleave",function(){
-  $(".user-menu > a").removeClass("open")
-  $(".user-depth01").fadeOut();
+  $(".user-menu > a").stop().removeClass("open")
+  $(".user-depth01").stop().fadeOut();
 })
 
 $(".user-depth01 > li").on("click",function(){
   $(".user-depth01 > li").removeClass("on");
   $(this).addClass("on");
 })
-
-function userMenu() {
-  $(".user-depth01").fadeIn();
-}
