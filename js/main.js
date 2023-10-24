@@ -13,8 +13,8 @@ $(".user-menu > a").on("mouseenter",function(){
   $(this).addClass("open");
   setTimeout("userMenu()",300)
 })
-$(".user-menu > a").on("mouseleave",function(){
-  $(this).removeClass("open")
+$(".user-menu").on("mouseleave",function(){
+  $(".user-menu > a").removeClass("open")
   $(".user-depth01").fadeOut();
 })
 
