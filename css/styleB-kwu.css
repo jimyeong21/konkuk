@@ -1,6 +1,193 @@
 .wrap .mo{
   display: none;
 }
+.inner-170{
+  max-width: 170rem;
+  padding: 0 5rem;
+  margin: auto;
+}
+/* main 1 */
+.main-b01{
+  width: 100%;
+  overflow: hidden;
+}
+.main-b01 .section01 .visual{
+  position: relative;
+}
+.main-b01 .section01 .quick{
+  position: absolute;
+  top:0;
+  right:16rem;
+}
+.main-b01 .section01 .quick-img{
+  position: relative;
+  width: 12rem;cursor: pointer;
+}
+.main-b01 .section01 .quick-img2{
+  position: absolute;
+  top: 9.4rem;
+  left:0;
+  width: 14.2rem;
+  transform: translateX(-87%);
+  opacity: 0;
+  transition: all .3s ease 0s;
+}
+.main-b01 .section01 .quick-img:hover .quick-img2{
+  opacity: 1;
+}
+.main-b01 .section02{
+  position: relative;
+  padding-top: 19.4rem;
+  padding-bottom: 14.8rem;
+}
+.main-b01 .section02 > img{
+  position: absolute;
+  max-width: 120rem;
+  width: 70%;
+  top:0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.main-b01 .tit-notice{
+  margin-bottom: 8.1rem;
+}
+.main-b01 .cont-notice{
+  display: flex;
+  border-top: 0.2rem solid #222;
+}
+.main-b01 .tab-notice{
+  width: 35.2rem;
+}
+.main-b01 .tab-notice li{
+  position: relative;
+  padding: 1.4rem 4rem;
+  background: #021136;
+  border: 1px solid #222;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: -0.036rem;
+  cursor: pointer;
+  transition: all .5s ease 0s;
+}
+.main-b01 .tab-notice li + li{
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.12);;
+}
+.main-b01 .tab-notice li:hover{
+  width: calc(100% + 4rem);
+  padding-left: 7rem;
+  background: #fff url('../images/arr-notice.png') no-repeat calc(100% - 4rem) 50% / 10rem auto;
+  border-top:1px solid #222;
+  color: #222;
+}
+.main-b01 .tab-notice li::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top:50%;
+  left: 4rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #222;
+  opacity: 0;
+  transition: all .3s ease .2s;
+}
+.main-b01 .tab-notice li:hover::before{
+  opacity: 1;
+}
+.main-b01 .list-notice{
+  display: flex;
+  gap:6.4rem;
+  flex:1;
+  padding-left: 6.4rem;
+}
+.main-b01 .list-notice > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 0;
+  border-bottom: 0.1rem solid #222;
+  cursor: pointer;
+}
+.main-b01 .list-notice > div:hover{
+  padding-bottom: 3.9rem;
+  border-bottom: 0.2rem solid #222;
+}
+.main-b01 .list-notice > div:hover h3{
+  font-weight: 500;
+  text-decoration: underline;
+}
+.main-b01 .list-notice h3{
+  color: #222;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.8rem; 
+  letter-spacing: -0.048rem;
+}
+.main-b01 .list-notice p{
+  color: #555;
+  font-size: 1.6rem;
+  font-weight: 350;
+  line-height: 2.8rem; 
+  letter-spacing: -0.032rem;
+}
+.main-b01 .list-notice > div:hover p{
+  text-decoration: underline;
+}
+.main-b01 .list-notice span{
+  color: #555;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  letter-spacing: -0.032rem;
+}
+.main-b01 .section04{
+  margin-top: 14.9rem;
+  margin-bottom: 14rem;
+}
+.main-b01 .section04 > img{
+  margin-bottom: 7.7rem;
+}
+.main-b01 .page-media{
+  display: flex;
+  gap:4rem;
+  width: 100%;
+  height: 0.8rem;
+  margin-top: 5.4rem;
+}
+.main-b01 .page-media button{
+  width: 4rem;
+  height: 0.8rem;
+}
+.main-b01 .page-media .prev{
+  background: url('../images/arr-left-media.png') no-repeat 0 0 /auto 0.8rem;
+}
+.main-b01 .page-media .next{
+  background: url('../images/arr-right-media.png') no-repeat 0 0 /auto 0.8rem;
+}
+.main-b01 .page-media .scroll{
+  width: calc(100% - 16rem);
+  height: 0.4rem;
+  background: url('../images/media-scroll.png') no-repeat 0 100% / 100% auto;
+}
+@keyframes letter {
+  0%{
+    transform: translateX(10%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.main-b01 .section05{
+  padding-bottom: 2.6rem;
+}
+.main-b01 .section05 p{
+  width: 1023rem;
+  height: 14rem;
+  animation: letter 35s linear infinite;
+}
+/* main 2 */
 .main-b02 .pc{
   display: flex;
 }
@@ -207,6 +394,7 @@
   width: calc(100% + 2px);
   transform: translateX(-2px);
 }
+
 @media screen and (max-width:900px){
   .wrap .mo{
       display:block;
