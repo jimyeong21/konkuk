@@ -66,11 +66,19 @@ html {
 }
 .page-warp > a .img-pc {
   height: 16rem;
-  width: auto;
+  width: 28rem;
+  object-fit: cover;
+  object-position: top left;
+  border: 3px solid #000;
+  border-radius: 1rem;
 }
 .page-warp > a .img-mo {
   height: 14rem;
-  width: auto;
+  width: 7rem;
+  object-fit: cover;
+  object-position: top left;
+  border: 3px solid #000;
+  border-radius: 1rem;
 }
 .page-warp p {
   margin-top: 1rem;
