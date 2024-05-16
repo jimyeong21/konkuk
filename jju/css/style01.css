@@ -51,7 +51,7 @@
 }
 .main-visual li > div{
   position: absolute;
-  top:430px;
+  bottom:303px;
   left: 50%;
   max-width: 1700px;
   width: 100%;
@@ -67,8 +67,8 @@
   display: flex;
   position: absolute;
   gap:15px;
-  top:330px;
   left: 50%;
+  bottom: 638px;
   max-width: 1700px;
   width: 100%;
   margin: auto;
@@ -80,7 +80,6 @@
   display: flex;
   gap: 10px;
   width: auto;
-  margin-left: 60px;
   font-size: 20px;
   font-weight: 500;
   line-height: 23px;
