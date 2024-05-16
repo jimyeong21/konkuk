@@ -150,3 +150,21 @@
   color: #0078AD;
   text-align: center;
 }
+.depart-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.depart-footer {
+  background: url(../images/depart-footer.png) top center / cover no-repeat;
+}
+.depart-visual {
+  height: 100vh;
+  background: url(../images/depart-visual.png) top center / cover no-repeat;
+}
+.depart-section > div {
+  margin: 0 auto;
+  max-width: 160rem;
+  width: 100%;
+}
