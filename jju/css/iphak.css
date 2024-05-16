@@ -163,7 +163,7 @@
   height: 100vh;
   background: url(../images/depart-visual.png) top center / cover no-repeat;
 }
-.depart-section > div {
+.main-section > div {
   margin: 0 auto;
   max-width: 160rem;
   width: 100%;
