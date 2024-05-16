@@ -207,9 +207,24 @@
   border-bottom: 1px solid #DBDBDB;
   background: #FFFAF5;
 }
+/* section07 */
 .sec07-t{
   border-bottom: 1px solid #DBDBDB;
 }
+.sec07-b{
+  position: relative;
+}
+.sec07-b::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+  right:0;
+  width:368px;
+  height: 684px;
+  background: url('../images/bg-main-nav.png') no-repeat 100% 100% / contain;
+}
+/* footer */
 .main-footer{
   padding: 50px 0;
   background: #222;
