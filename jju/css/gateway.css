@@ -30,14 +30,14 @@ html {
   padding: 0 10rem;
 }
 .logo-wrap {
-  margin-top: 9rem;
+  margin-top: 4rem;
   padding-bottom: 4.5rem;
   border-bottom: 1px solid #999;
 }
 .gate-logo {
   margin: 0 auto;
-  width: 25.5rem;
-  height: 7.6rem;
+  width: 22rem;
+  height: auto;
 }
 .gate-logo img{
   max-height: 100%;
