@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/swiper.min.css">
   <link rel="stylesheet" href="../css/style01.css">
@@ -22,33 +23,33 @@
         </div>
       </header>
       <div class="main-visual">
-        <div class="wrap-visu-controll">
-          <div class="visual-pasin"></div>
-          <button type="button"><img src="../images/ico-m-stop.png" alt=""></button>
+        <div class="wrap-visu-controll" >
+          <div class="visual-pasin" data-aos="fade-up" data-aos-duration="800"></div>
+          <button type="button" data-aos="fade-up" data-aos-duration="800"><img src="../images/ico-m-stop.png" alt=""></button>
         </div>
         <ul class="swiper-wrapper">
           <li class="swiper-slide">
             <img src="../images/img-main-visu.png" alt="">
             <div>
-              <img src="../images/img-mvisu-txt.png" alt="">
+              <img src="../images/img-mvisu-txt.png" alt="" data-aos="fade-up" data-aos-duration="1000">
             </div>
           </li>
           <li class="swiper-slide">
             <img src="../images/img-mian-visu02.png" alt="">
             <div>
-              <img src="../images/img-mvisu-txt.png" alt="">
+              <img src="../images/img-mvisu-txt.png" alt="" data-aos="fade-up" data-aos-duration="1000">
             </div>
           </li>
           <li class="swiper-slide">
             <img src="../images/img-main-visu.png" alt="">
             <div>
-              <img src="../images/img-mvisu-txt.png" alt="">
+              <img src="../images/img-mvisu-txt.png" alt="" data-aos="fade-up" data-aos-duration="1000">
             </div>
           </li>
           <li class="swiper-slide">
             <img src="../images/img-mian-visu02.png" alt="">
             <div>
-              <img src="../images/img-mvisu-txt.png" alt="">
+              <img src="../images/img-mvisu-txt.png" alt="" data-aos="fade-up" data-aos-duration="1000">
             </div>
           </li>
         </ul>
@@ -56,19 +57,19 @@
       </div>
     </section>
     <section class="main-sec02">
-      <div class="sec02-l">
+      <div class="sec02-l" data-aos="fade-up" data-aos-duration="1000">
         <img src="../images/img-mnotice.png" alt="">
       </div>
-      <div class="sec02-r">
+      <div class="sec02-r" data-aos="fade-up" data-aos-duration="1000">
         <img src="../images/img-mnotice02.png" alt="">
       </div>
     </section>
     <section class="main-sec03">
       <div class="inner-1600">
-        <div class="sec03-t">
+        <div class="sec03-t" data-aos="fade-up" data-aos-duration="1000">
           <img src="../images/img-mnews-tit.png" alt="">
         </div>
-        <div class="sec03-b">
+        <div class="sec03-b" data-aos="fade-up" data-aos-duration="1000">
           <div class="sec03-l">
             <img src="../images/img-mnew-cont.png" alt="">
             <!-- <div class="sec03-controll">
@@ -92,12 +93,12 @@
       </div>
     </section>
     <section class="main-sec04">
-      <div class="inner-1600">
+      <div class="inner-1600" data-aos="fade-up" data-aos-duration="1000">
         <img src="../images/img-msec04.png" alt="">
       </div>
     </section>
     <section class="main-sec05">
-      <div class="inner-1600">
+      <div class="inner-1600" data-aos="fade-up" data-aos-duration="1000">
         <img src="../images/img-mmedia-tit.png" alt="">
         <div class="slide-sec05">
           <img src="../images/img-mmedia.png" alt="">
@@ -107,7 +108,7 @@
       </div>
     </section>
     <section class="main-sec06">
-      <div class="inner-1600">
+      <div class="inner-1600" data-aos="fade-up" data-aos-duration="1000">
         <img src="../images/img-m-quick.png" alt="">
       </div>
     </section>
@@ -117,7 +118,7 @@
           <img src="../images/img-mian-nav-t.png" alt="">
         </div>
       </div>
-      <div class="inner-1600">
+      <div class="inner-1600" data-aos="fade-up" data-aos-duration="1000">
         <img src="../images/img-main-nav.png" alt="nav">
       </div>
     </section>
@@ -127,9 +128,11 @@
       </div>
     </footer>
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/swiper-bundle.min.js"></script>
   <script>
+    AOS.init();
     //main visual
     const swiperMainVisual = new Swiper('.main-visual', {
       effect : 'fade',
