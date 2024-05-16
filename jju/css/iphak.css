@@ -1,0 +1,152 @@
+.iphak-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.iphak-visual {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 9.5rem);
+  background: url(../images/iphak-visual01.png) center / cover no-repeat;
+}
+.quick-area {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: -9.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.quick-area .left-box img {
+  max-width: 57rem;
+  height: auto;
+}
+.quick-area .right-box {
+  background: #fff;
+  width: 95rem;
+}
+.quick-area .quick-tit {
+  padding: 4rem 0;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.4rem;
+  text-align: center;
+  border-bottom: 0.1rem solid #dbdbdb;
+  color: #0078AD;
+}
+.quick-area .left-box {
+  position: relative;
+}
+.left-box .test-list {
+  position: absolute;
+  top: 43.2rem;
+  left: 5.5rem;
+}
+.left-box .test-list > li + li {
+  margin-top: 2rem;
+}
+.left-box .test-list > li input {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0.2rem solid #fff;
+  border-radius: 0.2rem;
+}
+.left-box .test-list > li input:checked {
+  background: #F7CD00 url(../images/iphak-ico-checked.png) center / 1.2rem auto no-repeat;
+  border: 0.2rem solid #F7CD00;
+}
+.left-box .test-list > li label{
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.3rem;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+.left-box .next-step {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  position: absolute;
+  bottom: 6.6rem;
+  left: calc(100% - 22rem);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.left-box .next-step img {
+  width: 6rem;
+  height: auto;
+}
+.left-box .next-step:hover img {
+  animation: arrow 0.8s ease-in-out infinite;
+}
+@keyframes arrow {
+  0% {
+    margin-left: 0rem;
+  }
+  50% {
+    margin-left: 1.5rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}
+.quick-menu {
+  display: flex;
+}
+.quick-menu > li {
+  padding: 5rem 0;
+  width: calc(100% / 3);
+  cursor: pointer;
+}
+.quick-menu > li:hover > span {
+  background-color: #F7CD00;
+}
+.quick-menu > li + li {
+  border-left: 0.1rem solid #dbdbdb;
+}
+.quick-menu > li > span {
+  display: block;
+  margin: 0 auto;
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
+  background-color: #0078AD;
+  transition: all 0.3s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.quick-menu > li:nth-last-child(1) > span {
+  background-image: url(../images/iphak-ico-quick03.png);
+  background-size: 5.8rem auto;
+}
+.quick-menu > li:nth-last-child(2) > span {
+  background-image: url(../images/iphak-ico-quick02.png);
+  background-size: 5.5rem auto;
+}
+.quick-menu > li:nth-last-child(3) > span {
+  background-image: url(../images/iphak-ico-quick01.png);
+  background-size: 6rem auto;
+}
+.quick-menu > li:nth-last-child(1):hover > span {
+  background-image: url(../images/iphak-ico-quick03_on.png);
+}
+.quick-menu > li:nth-last-child(2):hover > span {
+  background-image: url(../images/iphak-ico-quick02_on.png);
+}
+.quick-menu > li:nth-last-child(3):hover > span {
+  background-image: url(../images/iphak-ico-quick01_on.png);
+}
+.quick-menu > li > p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.3rem;
+  color: #0078AD;
+  text-align: center;
+}
