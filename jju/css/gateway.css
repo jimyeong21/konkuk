@@ -61,11 +61,6 @@ html {
   font-weight: 300;
   text-align: center;
 }
-.type-list .main .type-tit{
-  text-align: left;
-  max-width: 988px;
-  margin: 1.5rem auto;
-}
 .type-list .type-tit > span {
   font-weight: 700;
 }
