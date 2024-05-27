@@ -1,3 +1,11 @@
+.wrap {
+  width: 100%;
+}
+.wrap img{
+  margin: 0 auto;
+  max-width: 192rem;
+  width: 100%;
+}
 .wrap-mo {
   width: 100%;
 }
