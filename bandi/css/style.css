@@ -1,0 +1,75 @@
+/* main */
+/* main - visual */
+.main-visual{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.visual-slide{
+  width: 100%;
+  height: 100%;
+}
+.visual-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual-slide li{
+  position: relative;
+  height: 100%;
+}
+.visual-slide .cont-m-visu{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+.cont-m-visu span{
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 28.64px;
+  letter-spacing: -0.02em;
+}
+.tit-m-visu{
+  margin-bottom: 2rem;
+  font-size: 9rem;
+  font-weight: 700;
+  line-height: 10rem;
+  letter-spacing: -0.02em;
+}
+.txt-m-visu{
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 45.35px;
+  letter-spacing: -0.02em;
+}
+/* main - company*/
+.main-company{
+  padding: 5rem 0;
+  background: #060621;
+  color:#fff;
+}
+.main-company > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.m-company-l{
+  max-width: 97.3rem;
+}
+.m-company-r{
+  width: 45rem;
+}
+/* main product */
+.main-product{
+  background: vaR(--color-navy);
+}
+/* main - business */
+.main-business{
+  background: var(--color-l-bl) url('../images/bg-m-busi.png') no-repeat 100% 50% / 109.9rem auto;
+}
+/* main news */
+.main-news{
+  background:url('../images/bg-m-news.png') no-repeat 100% 0 / cover;
+}

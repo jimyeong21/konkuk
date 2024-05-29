@@ -1,0 +1,253 @@
+:root{
+  /* point color */
+  --color-gr:#22AC39;
+  --color-yg:#CBDA00;
+  --color-bl:#01A1BE;
+  --color-bl02:#1F2B60;
+  --color-navy:#0C213D;
+  --color-red:#E12723;
+  --color-red02:#F34161;
+  /* light color */
+  --color-l-bl:#F4F8FC;
+  --color-l-gr:#F4FFF6;
+  /* 그라디언트 */
+  --bg-gra: linear-gradient(90deg, #CBDA00 5.8%, #CBDA00 9.96%, #22AC39 45.2%, #00A0C1 94.47%, #00A0C1 94.53%);
+  --bg-gra02: linear-gradient(90deg, #CBDA00 5.8%, #00A0C1 94.53%);
+  /* shadow */
+  --shadow:2.63px 2.63px 15px 0px #00000026;
+  --shadow02: 0px 2px 24px 0px #0000001A;
+}
+
+html{
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+.frame-1600{
+  max-width: 170rem;
+  width: 100%;
+  padding: 0 5rem;
+  margin: auto;
+}
+/* font */
+.font-en{
+  font-family: 'outfit';
+}
+.cor-bl{
+  color: #222!important;
+}
+/* text */
+.tit-lg{
+  color:#222;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 5.2rem;
+}
+.tit-md01{
+  color:#222;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 33.8px;
+}
+.tit-md02{
+  color:#222;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 31.2px;
+}
+.tit-sm01{
+  color:#222;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.tit-sm02{
+  color:#222;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+}
+.txt-style{
+  color:#55585E;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+.txt-style02{
+  color:#222;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+}
+.font-en.tit-md01,.font-en.tit-md02m,.font-en.tit-sm01{
+  font-weight: 600;
+}
+/* button */
+.btn{
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 23.4px;
+}
+/* header */
+.header{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  border-bottom: 1px solid #FFFFFF4D;
+  z-index: 2;
+  color:#fff;
+}
+.header > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h-logo{
+  width: 18.4rem;
+  object-fit: contain;
+}
+.h-gnb{
+  display: flex;
+  align-items: center;
+  height: 10rem;
+}
+.h-gnb > li{
+  position: relative;
+  width: 14rem;
+  height: 100%;
+}
+.h-gnb > li::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 0.2rem;
+  background: var(--color-gr);
+  opacity: 0;
+  transition: .3s ease 0s;
+}
+.h-gnb > li.on::before{
+  opacity: 1;
+}
+.h-gnb > li > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: #fff;
+  opacity: 0.6;
+  transition: .3s ease 0s;
+}
+.h-gnb > li.on > a{
+  opacity: 1;
+}
+.h-gnb ul{
+  display: none;
+}
+.h-nav{
+  display: flex;
+  align-items: center;
+  gap:3rem;
+}
+.h-nav .h-Inquiry{
+  display: flex;
+  align-items: center;
+  gap:2rem;
+  margin-right: 2rem;
+  padding: 1.4rem 3rem;
+  border: 2px solid var(--color-gr);
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 21.48px;
+}
+.h-nav .h-Inquiry img{
+  width: 2.4rem;;
+}
+.h-nav .btn-h-search,.h-lag{
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.h-lag{
+  position: relative;
+}
+.h-lag > div{
+  position: absolute;
+  top: 4.4rem;
+  left: 50%;
+  padding: 1.5rem 2rem;
+  transform: translateX(-50%);
+  background: #FFFFFF01;
+  backdrop-filter: blur(10px);
+  border: 2px solid #FFFFFF4D;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+.h-lag > div a{
+  opacity: 0.5;
+}
+.h-lag > div a.on{
+  opacity: 1;
+}
+.btn-all-menu{
+  position: relative;
+  width: 3rem;
+  height: 2.4rem;
+}
+.btn-all-menu > span{
+  position: absolute;
+  lefT:0;
+  width: 100%;
+  height: 0.24rem;
+  background: #fff;
+}
+.btn-all-menu > span:nth-of-type(1){
+  top:0;
+}
+.btn-all-menu > span:nth-of-type(2){
+  top:50%;
+  transform: translateY(-50%);
+}
+.btn-all-menu > span:nth-of-type(3){
+  bottom:0;
+}
+
+@media (max-width: 768px){
+  .tit-lg{
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+  }
+  .tit-md01,.tit-md02{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+  .tit-sm01,.tit-sm02{
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.7rem;
+  }
+  .txt-style{
+    font-size: 1.6rem;
+    line-height: 20.8px;
+  }
+  .txt-style02{
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    letter-spacing: -0.36px;
+    
+  }
+  .font-en.tit-md01,.font-en.tit-md02m,.font-en.tit-sm01{
+    font-weight: 600;
+  }
+}
