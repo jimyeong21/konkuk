@@ -1,4 +1,57 @@
 /* main */
+.wrap-main-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;;
+}
+.tit-main{
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top:1.2rem;
+  color:#fff;
+}
+.tit-main::before,.tit-main::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 0.2rem;
+}
+.tit-main::before{
+  width: 10rem;
+  background: #fff;
+  opacity: 0.5;
+}
+.tit-main::after{
+  width: 4rem;
+  background: var(--color-gr);
+}
+.tit-main + p{
+  color:#fff;
+}
+.tab-main-slide{
+  display: flex;
+  gap:2rem;
+}
+.tab-main-slide li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 13rem;
+  height: 5rem;
+  padding: 0 3rem;
+  color:#fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 5rem;
+  background: var(--color-bl02);
+}
+.tab-main-slide li.on a{
+  background: var(--color-gr);
+}
+
 /* main - visual */
 .main-visual{
   position: relative;
@@ -53,7 +106,7 @@
 .main-company > div{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .m-company-l{
   max-width: 97.3rem;
@@ -63,13 +116,156 @@
 }
 /* main product */
 .main-product{
-  background: vaR(--color-navy);
+  padding: 14rem 0;
+  background: var(--color-navy);
+}
+.wrap-slide-product{
+  overflow: hidden;
+}
+.slide-product{
+  display: none;
+}
+.slide-product.on{
+  display: block;
+}
+.slide-product .tit-product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2rem;
+  margin-top: 0.5rem;
+  font-family: 'outfit';
+  color:#fff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+}
+.slide-product .tit-product span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+}
+.slide-product li:hover .tit-product span{
+  border: none;
+  background: var(--bg-gra02);
+}
+.slide-product .tit-product span img{
+  width: 2.4rem;
+  transition: all .3s ease 0s;
+}
+.slide-product li:hover .tit-product span img{
+  transform: rotate(-45deg);
 }
 /* main - business */
 .main-business{
-  background: var(--color-l-bl) url('../images/bg-m-busi.png') no-repeat 100% 50% / 109.9rem auto;
+  padding: 14rem 0;
+  background: var(--color-l-bl) url('../images/bg-m-busi.png') no-repeat 100% 50% / 100% auto;
+}
+.main-business .tit-main,.main-business .tit-main + p{
+  color: var(--color-navy);
+}
+.main-business .tit-main::before{
+  background: var(--color-navy);
+}
+.slide-busi{
+  display: none;
+}
+.slide-busi.on{
+  display: block;
+}
+.slide-busi li{
+  padding: 3rem;
+  border-radius: 2rem;
+  background: var(--color-navy);
+  text-align: center;
+}
+.slide-busi .tit-m-busi{
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-l-bl);
+  color: var(--color-l-bl);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.2px;
+}
+.slide-busi img{
+  margin: 3rem auto;
+  width: 15rem;;
+}
+.slide-busi p{
+  min-height: 7.1rem;
+  color: var(--color-l-bl);
 }
 /* main news */
 .main-news{
+  padding: 14rem 0 10.6rem;
   background:url('../images/bg-m-news.png') no-repeat 100% 0 / cover;
+}
+.main-news .wrap-main-top + div{
+  overflow: hidden;
+}
+.slide-news{
+  display: none;
+}
+.slide-news.on{
+  display: block;
+}
+.slide-news li{
+  border: 2px solid #DBDBDB;
+  border-radius: 2rem;
+  background: #fff;
+  overflow: hidden;
+  transition: .3s ease 0s;
+}
+.slide-news li:hover{
+  border-color: var(--color-gr);
+}
+.img-m-news{
+  aspect-ratio: 1 / 0.721;
+}
+.img-m-news img{
+  height: 100%;
+  object-fit: cover;
+}
+.cont-m-news{
+  padding: 3rem;
+  color: var(--color-navy);
+}
+.tit-m-news{
+  color: var(--color-navy);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 31.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cont-m-news p{
+  height: 7rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-navy);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.cont-m-news  span{
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+/* main- footer slide */
+.footer-slide{
+  padding: 3rem;
+  overflow: hidden;
+}
+.footer-slide .swiper-wrapper{
+  transition-timing-function: linear;
 }

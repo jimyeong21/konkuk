@@ -221,7 +221,89 @@ html{
 .btn-all-menu > span:nth-of-type(3){
   bottom:0;
 }
-
+/* footer */
+.footer{
+  padding: 5rem 0;
+  background: #222;;
+}
+.footer > div{
+  display: flex;
+  align-items: center;
+  gap:10rem;
+}
+.f-logo{
+  width:39rem;
+}
+.wrap-f-cont{
+  flex: 1;
+}
+.footer-t{
+  display: flex;
+  gap:2.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #888888;
+}
+.footer-t a{
+  color:#BDBDBD;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+.footer-t a:first-of-type{
+  color:#fff;
+  font-weight: 500;
+}
+.footer-b{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cont-footer{
+  flex:1;
+  max-width: 65rem;
+}
+.tit-footer{
+  margin-bottom: 2rem;
+  color:#BDBDBD;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+.footer-b ul{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 0.8rem;
+}
+.footer-b li{
+  display: flex;
+  gap:1rem;
+  color:#BDBDBD;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 20.8px;
+}
+.footer-b li span{
+  color:#DBDBDB;
+  font-weight: 600;
+}
+.footer-b .copy{
+  margin-top: 0.8rem;
+  color:#DBDBDB;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 20.8px;
+}
+.footer-sns{
+  display: flex;
+  gap:1.5rem
+}
+.footer-sns > a{
+  display: block;
+  width: 4.5rem;
+  border-radius: 50%;
+}
 @media (max-width: 768px){
   .tit-lg{
     font-size: 2.8rem;
