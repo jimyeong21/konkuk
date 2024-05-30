@@ -14,8 +14,13 @@
     width: 100%;
   }
 }
-
 /* main */
+.main-content{
+  position: relative;
+  margin-top: 100vh;
+  z-index: 2;
+  background: #fff;
+}
 .wrap-main-top{
   display: flex;
   align-items: center;
@@ -59,11 +64,12 @@
   min-width: 13rem;
   height: 5rem;
   padding: 0 3rem;
+  border-radius: 5rem;
+  background: var(--color-bl02);
   color:#fff;
   font-size: 1.8rem;
   font-weight: 700;
-  border-radius: 5rem;
-  background: var(--color-bl02);
+  white-space: nowrap;
 }
 .tab-main-slide li.on a{
   background: var(--color-gr);
@@ -71,7 +77,9 @@
 
 /* main - visual */
 .main-visual{
-  position: relative;
+  position: fixed;
+  top:0;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -121,6 +129,7 @@
   position: absolute;
   left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
   color: #fff;
   text-align: center;
   font-size: 1.6rem;
@@ -180,6 +189,7 @@
   gap:1.5rem;
   width: auto;
   height: auto;
+  margin: 0!important;
   background: none;
   opacity: 1;
 }
@@ -209,9 +219,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap:6rem;
 }
 .m-company-l{
   max-width: 97.3rem;
+  flex:1;
 }
 .m-company-r{
   width: 45rem;
@@ -229,6 +241,12 @@
 }
 .slide-product.on{
   display: block;
+}
+.slide-product li .img-m-product img{
+  transition: all .3s ease 0s;
+}
+.slide-product li:hover .img-m-product img{
+  transform: scale(1.08);
 }
 .slide-product .tit-product{
   display: flex;
@@ -267,6 +285,7 @@
 .main-business{
   padding: 14rem 0;
   background: var(--color-l-bl) url('../images/bg-m-busi.png') no-repeat 100% 50% / 100% auto;
+  overflow: hidden;
 }
 .main-business .tit-main,.main-business .tit-main + p{
   color: var(--color-navy);
@@ -279,6 +298,9 @@
 }
 .slide-busi.on{
   display: block;
+}
+.slide-busi ul{
+  display: flex;
 }
 .slide-busi li{
   padding: 3rem;
@@ -321,7 +343,7 @@
   border-radius: 2rem;
   background: #fff;
   overflow: hidden;
-  transition: .3s ease 0s;
+  transition: border-color .3s ease 0s;
 }
 .slide-news li:hover{
   border-color: var(--color-gr);
@@ -395,4 +417,133 @@
 }
 .footer-slide .swiper-wrapper{
   transition-timing-function: linear;
+}
+
+@media (max-width:1200px){
+  /* main */
+  .wrap-main-top{
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+@media (max-width:1150px){
+  /* main */
+  .main-company > div{
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+  }
+  .main-news{
+    overflow: hidden;
+  }
+  .main-news .wrap-main-top + div{
+    overflow: visible;
+  }
+  .main-product .wrap-main-top{
+    position: relative;
+    padding-bottom: 8rem;
+  }
+  .main-product .tab-main-slide{
+    position: absolute;
+    bottom: 0;
+    width: calc(100% + 5rem);
+    overflow-x: auto;
+  }
+}
+@media (max-width:768px){
+  /* main */
+  .tit-main{
+    margin-bottom: 1.5rem;
+    padding-top: 0.7rem;
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+  }
+  .tit-main::before{
+    width: 7.5rem;
+  }
+  .tit-main::after{
+    width: 3rem;
+  }
+  .visual-slide .cont-m-visu{
+    top: 41.8%;
+  }
+  .cont-m-visu span{
+    font-size: 1.6rem;
+    line-height: 19.09px;
+    letter-spacing: -0.02em;
+  }
+  .tit-m-visu{
+    margin-bottom: 1.5rem;
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.02em;
+  }
+  .txt-m-visu{
+    font-size: 2rem;
+    line-height: 23.87px;
+    letter-spacing: -0.02em;
+  }
+  .controll-m-visu{
+    bottom: unset;
+    top:63%;
+  }
+  .controll-m-visu{
+    gap:1.2rem;
+  }
+  .controll-m-visu .next-m-visu, .controll-m-visu .prev-m-visu{
+    width: 2.5rem;
+  }
+  .pasin-m-visu{
+    gap:1.2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+  .visual-progress{
+    width: 11rem;
+  }
+  .visual-scroll{
+    font-size: 14px;
+    line-height: 16.71px;
+    letter-spacing: -0.02em;
+  }
+  .visual-scroll p{
+    margin-bottom: 2rem;
+  }
+  .visual-scroll .scrollbar{
+    height: 8rem;
+  }
+  .visual-scroll .scrollbar span{
+    height: 2.5rem;
+  }
+  .main-company{
+    padding: 6rem 0;
+  }
+  .m-company-r{
+    max-width: 30rem;
+    width: 100%;
+  }
+  .main-product,.main-business{
+    padding: 6rem 0;
+  }
+  .main-product .tab-main-slide{
+    width: calc(100% + 2rem);
+  }
+  
+}
+@media (max-width:375px){
+  /* main */
+  .pasin-m-visu{
+    flex:1;
+  }
+  .move-m-visu{
+    width: 1rem;
+  }
+  .swiper-pagination-bullet-active{
+    flex:1;
+  }
+  .visual-progress{
+    width: auto;
+    flex:1;
+  }
 }

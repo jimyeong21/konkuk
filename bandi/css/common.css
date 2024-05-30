@@ -18,6 +18,17 @@
   --shadow02: 0px 2px 24px 0px #0000001A;
 }
 
+@keyframes flootUp{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 html{
   font-size: 10px;
   font-family: 'Pretendard';
@@ -93,6 +104,7 @@ html{
   right: 5rem;
   bottom: 5rem;
   z-index: 5;
+  animation: flootUp 1s 0s forwards;
 }
 .wrap-btn-top button{
   width: 5rem;
@@ -116,6 +128,7 @@ html{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 .h-logo{
   width: 18.4rem;
@@ -143,7 +156,7 @@ html{
   opacity: 0;
   transition: .3s ease 0s;
 }
-.h-gnb > li.on::before{
+.h-gnb > li:hover::before{
   opacity: 1;
 }
 .h-gnb > li > a{
@@ -159,7 +172,7 @@ html{
   opacity: 0.6;
   transition: .3s ease 0s;
 }
-.h-gnb > li.on > a{
+.h-gnb > li:hover > a{
   opacity: 1;
 }
 .h-gnb ul{
@@ -251,8 +264,10 @@ html{
 }
 /* footer */
 .footer{
+  position: relative;
   padding: 5rem 0;
   background: #222;;
+  z-index: 2;
 }
 .footer > div{
   display: flex;
@@ -286,6 +301,7 @@ html{
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  gap:2rem;
 }
 .cont-footer{
   flex:1;
@@ -332,7 +348,32 @@ html{
   width: 4.5rem;
   border-radius: 50%;
 }
+@media (max-width:1200px){
+  /* header */
+  .h-gnb{
+    display: none;
+  }
+  /* footer */
+  .f-logo{
+    width: 18.4rem;
+  }
+}
+@media (max-width: 980px){
+  .footer > div{
+    flex-direction: column;
+    align-items: flex-start;
+    gap:3rem;
+  }
+  .footer-b{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 @media (max-width: 768px){
+  .frame-1600{
+    padding: 0 2rem;
+  }
+  /* txt */
   .tit-lg{
     font-size: 2.8rem;
     line-height: 4.2rem;
@@ -359,5 +400,24 @@ html{
   }
   .font-en.tit-md01,.font-en.tit-md02m,.font-en.tit-sm01{
     font-weight: 600;
+  }
+  /* top 버튼 */
+  .wrap-btn-top{
+    right: 2rem;
+    bottom: 2.2rem;
+  }
+  .wrap-btn-top .btn-Inquiry{
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  /* header */
+  .header{
+    height: 6.5rem;;
+  }
+  .h-logo{
+    width: 12.9rem;
+  }
+  .h-nav .h-Inquiry{
+    display: none;
   }
 }
