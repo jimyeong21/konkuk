@@ -14,6 +14,14 @@
 </head>
 <body>
   <div class="wrap">
+    <div class="wrap-btn-top">
+      <button type="button" class="btn-Inquiry">
+        <img src="" alt="제품 문의 하러 가기">
+      </button>
+      <button type="button" class="btn-top">
+        <img src="./images/ico-top.png" alt="사이트 상단으로 이동" onclick="">
+      </button>
+    </div>
     <!-- main visual -->
     <section class="main-visual">
       <!-- header -->
@@ -66,9 +74,9 @@
           </ul>
           <div class="h-nav">
             <a href="#n" class="h-Inquiry">제품문의<img src="./images/ico-pen.png" alt="제품문의 바로가기"></a>
-            <button type="button" class="btn-h-search">
+            <!-- <button type="button" class="btn-h-search">
               <img src="./images/ico-search.png" alt="">
-            </button>
+            </button> -->
             <div class="h-lag">
               <a href="#n">
                 <img src="./images/ico-lag.png" alt="언어 변경하기">
@@ -106,13 +114,32 @@
               <p class="txt-m-visu">testtesttest test  test </p>
             </div>
           </li>
+          <li class="swiper-slide">
+            <img class="img-m-visu" src="./images/bg-visual.png" alt="비주얼 슬라이드 배경이미지">
+            <div class="frame-1600 cont-m-visu">
+              <span>사용자의 마음을 읽는 감성소프트웨어 기업</span>
+              <h1 class="tit-m-visu font-en">BANDI SNC</h1>
+              <p class="txt-m-visu">다가오는 4차 산업혁명의<br>IT리더 브랜드로 성장하겠습니다.</p>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <img class="img-m-visu" src="./images/bg-m-news.png" alt="비주얼 슬라이드 배경이미지">
+            <div class="frame-1600 cont-m-visu">
+              <span>사용자의 마음을 읽는 감성소프트웨어 기업</span>
+              <h1 class="tit-m-visu font-en">test</h1>
+              <p class="txt-m-visu">testtesttest test  test </p>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="frame-1600 controll-m-visu">
-        <button type="button"></button>
+        <button type="button" class="prev-m-visu"><img src="./images/ico-prev.png" alt="이전 슬라이드 보기"></button>
         <div class="pasin-m-visu"></div>
-        <button type="button"></button>
-        <button type="button"></button>
+        <button type="button" class="move-m-visu">
+          <img class="stop" src="./images/ico-stop.png" alt="슬라이드 멈춤">
+          <!-- <img class="play" src="./images/ico-play.png" alt="슬라이드 재시작"> -->
+        </button>
+        <button type="button" class="next-m-visu"><img src="./images/ico-next.png" alt="다음 슬라이드 보기"></button>
       </div>
       <!-- //main-visual slide-->
       <div class="visual-scroll">
@@ -423,6 +450,15 @@
                   </a>
                 </li>
               </ul>
+              <div class="frame-1600 controll-m-news">
+                <button type="button" class="prev-m-news"><img src="./images/ico-prev.png" alt="이전 슬라이드 보기"></button>
+                <div class="pasin-m-news"></div>
+                <button type="button" class="stop-m-news">
+                  <img class="stop" src="./images/ico-stop.png" alt="슬라이드 멈춤">
+                  <img class="play" src="./images/ico-play.png" alt="슬라이드 재시작">
+                </button>
+                <button type="button" class="next-m-news"><img src="./images/ico-next.png" alt="다음 슬라이드 보기"></button>
+              </div>
             </div>
             <!-- //news slide -->
             <!-- event slide -->
@@ -453,6 +489,15 @@
                   </a>
                 </li>
               </ul>
+              <div class="frame-1600 controll-m-news">
+                <button type="button" class="prev-m-news"><img src="./images/ico-prev.png" alt="이전 슬라이드 보기"></button>
+                <div class="pasin-m-news"></div>
+                <button type="button" class="stop-m-news">
+                  <img class="stop" src="./images/ico-stop.png" alt="슬라이드 멈춤">
+                  <img class="play" src="./images/ico-play.png" alt="슬라이드 재시작">
+                </button>
+                <button type="button" class="next-m-news"><img src="./images/ico-next.png" alt="다음 슬라이드 보기"></button>
+              </div>
             </div>
             <!-- //event slide -->
           </div>
@@ -676,11 +721,21 @@
   <script>
     //visual
     const swiperMainVisual = new Swiper('.visual-slide', {
-      effect: "fade",
-      
+      effect : 'fade',
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.next-m-visu',
+        prevEl: '.prev-m-visu',
+      },
+      pagination: {
+        el: '.pasin-m-visu',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<div class="' + className + '"> 0' + (index + 1) + '<div class="visual-progress"><span></sapn></div></div>';
+        },
       },
     });
     // product
@@ -722,6 +777,14 @@
         delay: 3000, 
         disableOnInteraction: false,    
       },
+      navigation: {
+        nextEl: '.slide01 .next-m-news',
+        prevEl: '.slide01 .prev-m-news',
+      },
+      pagination: {
+        el: '.slide01 .pasin-m-news',
+        type: 'progressbar'
+      },
     });
     const swiperEvent = new Swiper('.slide-news.slide02', {
       direction: 'horizontal',
@@ -730,6 +793,14 @@
       autoplay: {      
         delay: 3000, 
         disableOnInteraction: false,    
+      },
+      navigation: {
+        nextEl: '.slide01 .next-m-news',
+        prevEl: '.slide01 .prev-m-news',
+      },
+      pagination: {
+        el: '.slide01 .pasin-m-news',
+        type: 'progressbar'
       },
     });
     // footer slide

@@ -1,3 +1,20 @@
+@keyframes masinScroll {
+  0%{
+    top:0;
+  }
+  100%{
+    top:100%
+  }
+}
+@keyframes v-progress {
+  0%{
+    width: 3.7rem;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
 /* main */
 .wrap-main-top{
   display: flex;
@@ -73,7 +90,7 @@
 }
 .visual-slide .cont-m-visu{
   position: absolute;
-  top:50%;
+  top:52.3%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: #fff;
@@ -96,6 +113,91 @@
   font-weight: 400;
   line-height: 45.35px;
   letter-spacing: -0.02em;
+}
+.visual-scroll{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 19.09px;
+  letter-spacing: -0.02em;
+  z-index: 2;
+  overflow: hidden;
+}
+.visual-scroll p{
+  margin-bottom: 5.7rem;
+}
+.visual-scroll .scrollbar{
+  position: relative;
+  width: 0.1rem;
+  height: 9.4rem;
+  background: #fff;
+}
+.visual-scroll .scrollbar span{
+  display: block;
+  position: absolute;
+  top:0;
+  left: -0.1rem;
+  width: 0.3rem;
+  height: 3rem;
+  background: #fff;
+  animation: masinScroll 1.5s 0s infinite ease;
+}
+.controll-m-visu{
+  display: flex;
+  gap:1.5rem;
+  position: absolute;
+  left: 50%;
+  bottom:12.6rem;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.controll-m-visu .next-m-visu,.controll-m-visu .prev-m-visu{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.move-m-visu{
+  width: 1.5rem;
+}
+.pasin-m-visu{
+  display: flex;
+  gap:1.5rem;
+  width: auto!important;
+  color:#fff;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.pasin-m-visu .swiper-pagination-bullet{
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+  width: auto;
+  height: auto;
+  background: none;
+  opacity: 1;
+}
+.visual-progress{
+  display: none;
+  width: 15rem;
+  height: 0.2rem;
+  background: rgb(255,255,255,0.5);
+}
+.pasin-m-visu .swiper-pagination-bullet-active .visual-progress{
+  display: block;
+}
+.visual-progress > span{
+  display: block;
+  width: 3.7rem;
+  height: 100%;
+  animation: v-progress 3.3s 0s infinite linear;
+  background: var(--color-gr);
 }
 /* main - company*/
 .main-company{
@@ -260,6 +362,31 @@
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 23.4px;
+}
+.controll-m-news{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1.5rem;
+  margin-top: 3rem;
+}
+.controll-m-news .prev-m-news,.controll-m-news .next-m-news{
+  width: 3.5rem;
+}
+.pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal{
+  position: relative;
+  width: 38.3rem;
+  height: 0.2rem;
+  background: rgb(255,255,255,50%);
+}
+.pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal > span{
+  background: var(--color-gr);
+}
+.stop-m-news{
+  width: 1.5rem;
+}
+.controll-m-news .play{
+  display: none;
 }
 /* main- footer slide */
 .footer-slide{
