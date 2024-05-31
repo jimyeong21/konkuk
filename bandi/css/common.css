@@ -420,4 +420,33 @@ html{
   .h-nav .h-Inquiry{
     display: none;
   }
+  /* footer */
+  .footer{
+    padding: 4rem 0;
+  }
+  .footer-t{
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+  .footer-t a{
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .tit-footer{
+    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .footer-b ul{
+    row-gap: 0.5rem;
+  }
+  .footer-b li{
+    font-size: 12px;
+    line-height: 15.6px;
+  }
+  .footer-b .copy{
+    margin-top: 0.5rem;
+    font-size: 12px;
+    line-height: 15.6px;
+  }
 }

@@ -192,7 +192,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">1.Bandi SSO
+                    <h3 class="tit-product">1.&nbsp;&nbsp;Bandi SSO
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -204,7 +204,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">2. Bandi EAM
+                    <h3 class="tit-product">2.&nbsp;&nbsp;Bandi EAM
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -216,7 +216,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">3. Bandi IM
+                    <h3 class="tit-product">3.&nbsp;&nbsp;Bandi IM
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -228,7 +228,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">1.Bandi SSO
+                    <h3 class="tit-product">1.&nbsp;&nbsp;Bandi SSO
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -240,7 +240,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">1.Bandi SSO
+                    <h3 class="tit-product">1.&nbsp;&nbsp;Bandi SSO
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -248,6 +248,15 @@
                   </a>
                 </li>
               </ul>
+              <div class="frame-1600 controll-m-product">
+                <button type="button" class="prev-m-product"><img src="./images/ico-prev.png" alt="이전 슬라이드 보기"></button>
+                <div class="pasin-m-product"></div>
+                <button type="button" class="stop-m-product">
+                  <img class="stop" src="./images/ico-stop.png" alt="슬라이드 멈춤">
+                  <img class="play" src="./images/ico-play.png" alt="슬라이드 재시작">
+                </button>
+                <button type="button" class="next-m-product"><img src="./images/ico-next.png" alt="다음 슬라이드 보기"></button>
+              </div>
             </div>
             <!-- //IAM slide -->
             <!-- 2-factor slide -->
@@ -258,7 +267,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">1.Bandi SSO
+                    <h3 class="tit-product">1.&nbsp;&nbsp;Bandi SSO
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -270,7 +279,7 @@
                     <div class="img-m-product">
                       <img src="./images/img-pack.png" alt="패키지 예시 이미지">
                     </div>
-                    <h3 class="tit-product">2. Bandi EAM
+                    <h3 class="tit-product">2.&nbsp;&nbsp;Bandi EAM
                       <span>
                         <img src="./images/ico-arr-right.png" alt="제품소개 페이지로 이동">
                       </span>
@@ -278,6 +287,15 @@
                   </a>
                 </li>
               </ul>
+              <div class="frame-1600 controll-m-product">
+                <button type="button" class="prev-m-product"><img src="./images/ico-prev.png" alt="이전 슬라이드 보기"></button>
+                <div class="pasin-m-product"></div>
+                <button type="button" class="stop-m-product">
+                  <img class="stop" src="./images/ico-stop.png" alt="슬라이드 멈춤">
+                  <img class="play" src="./images/ico-play.png" alt="슬라이드 재시작">
+                </button>
+                <button type="button" class="next-m-product"><img src="./images/ico-next.png" alt="다음 슬라이드 보기"></button>
+              </div>
             </div>
             <!-- //2-factor slide -->
           </div>
@@ -752,6 +770,14 @@
         delay: 3000, 
         disableOnInteraction: false,    
       },
+      navigation: {
+        nextEl: '.slide01 .next-m-product',
+        prevEl: '.slide01 .prev-m-product',
+      },
+      pagination: {
+        el: '.slide01 .pasin-m-product',
+        type: 'progressbar'
+      },
       breakpoints: {
         768:{
           slidesPerView: 2,
@@ -765,11 +791,19 @@
     });
     const swiperProduct2 = new Swiper('.slide-product.slide02', {
       direction: 'horizontal',
-      slidesPerView: 3,
-      spaceBetween: 50,
+      slidesPerView: 1,
+      spaceBetween: 0,
       autoplay: {      
         delay: 3000, 
         disableOnInteraction: false,    
+      },
+      navigation: {
+        nextEl: '.slide02 .next-m-product',
+        prevEl: '.slide02 .prev-m-product',
+      },
+      pagination: {
+        el: '.slide02 .pasin-m-product',
+        type: 'progressbar'
       },
       breakpoints: {
         768:{
@@ -874,11 +908,11 @@
         disableOnInteraction: false,    
       },
       navigation: {
-        nextEl: '.slide01 .next-m-news',
-        prevEl: '.slide01 .prev-m-news',
+        nextEl: '.slide02 .next-m-news',
+        prevEl: '.slide02 .prev-m-news',
       },
       pagination: {
-        el: '.slide01 .pasin-m-news',
+        el: '.slide02 .pasin-m-news',
         type: 'progressbar'
       },
       breakpoints: {

@@ -69,6 +69,7 @@
   color:#fff;
   font-size: 1.8rem;
   font-weight: 700;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 .tab-main-slide li.on a{
@@ -281,6 +282,37 @@
 .slide-product li:hover .tit-product span img{
   transform: rotate(-45deg);
 }
+.controll-m-news,.controll-m-product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1.5rem;
+  margin-top: 3rem;
+}
+.controll-m-product{
+  display: none;
+}
+.controll-m-news .prev-m-news,.controll-m-news .next-m-news,
+.controll-m-product .prev-m-product,.controll-m-product .next-m-product{
+  width: 3.5rem;
+}
+.pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.pasin-m-product.swiper-pagination-progressbar.swiper-pagination-horizontal{
+  position: relative;
+  width: 38.3rem;
+  height: 0.2rem;
+  background: rgb(255,255,255,50%);
+}
+.pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal > span,
+.pasin-m-product.swiper-pagination-progressbar.swiper-pagination-horizontal > span{
+  background: var(--color-gr);
+}
+.stop-m-news,.stop-m-product{
+  width: 1.5rem;
+}
+.controll-m-news .play,.controll-m-product .play{
+  display: none;
+}
 /* main - business */
 .main-business{
   padding: 14rem 0;
@@ -385,31 +417,6 @@
   font-weight: 400;
   line-height: 23.4px;
 }
-.controll-m-news{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:1.5rem;
-  margin-top: 3rem;
-}
-.controll-m-news .prev-m-news,.controll-m-news .next-m-news{
-  width: 3.5rem;
-}
-.pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal{
-  position: relative;
-  width: 38.3rem;
-  height: 0.2rem;
-  background: rgb(255,255,255,50%);
-}
-.pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal > span{
-  background: var(--color-gr);
-}
-.stop-m-news{
-  width: 1.5rem;
-}
-.controll-m-news .play{
-  display: none;
-}
 /* main- footer slide */
 .footer-slide{
   padding: 3rem;
@@ -447,11 +454,15 @@
     position: absolute;
     bottom: 0;
     width: calc(100% + 5rem);
+    padding-right: 5rem;
     overflow-x: auto;
   }
 }
 @media (max-width:768px){
   /* main */
+  .wrap-main-top{
+    margin-bottom: 3rem;
+  }
   .tit-main{
     margin-bottom: 1.5rem;
     padding-top: 0.7rem;
@@ -463,6 +474,13 @@
   }
   .tit-main::after{
     width: 3rem;
+  }
+  .tab-main-slide li a{
+    min-width: unset;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 21.48px;
   }
   .visual-slide .cont-m-visu{
     top: 41.8%;
@@ -527,9 +545,84 @@
     padding: 6rem 0;
   }
   .main-product .tab-main-slide{
+    gap:2rem;
     width: calc(100% + 2rem);
+    padding-right: 2rem;
   }
-  
+  .main-product .tab-main-slide li a{
+    min-width: unset;
+  }
+  .slide-product .tit-product{
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 36.4px;
+  }
+  .slide-product .tit-product span{
+    width: 4rem;
+    height: 4rem;
+  }
+  .slide-product .tit-product span img{
+    width: 1.9rem;
+  }
+  .controll-m-product{
+    display: flex;
+  }
+  .slide-busi li{
+    padding: 2rem 3rem;
+  }
+  .slide-busi .tit-m-busi{
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+  .slide-busi img{
+    margin: 2rem auto;
+  }
+  .slide-busi li p{
+    word-break: break-all;
+  }
+  .slide-busi.slide01 li:first-of-type br{
+    display: none;
+  }
+  .main-business .tab-main-slide,.main-news .tab-main-slide{
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .main-business .tab-main-slide li,.main-news .tab-main-slide li{
+    flex:1;
+  }
+  .main-news{
+    padding: 6rem 0 4rem;
+  }
+  .controll-m-news,.controll-m-product{
+    padding: 0;
+  }
+  .pasin-m-news.swiper-pagination-progressbar.swiper-pagination-horizontal,
+  .pasin-m-product.swiper-pagination-progressbar.swiper-pagination-horizontal{
+    flex:1;
+    width: auto;
+  }
+  .cont-m-news{
+    padding: 2rem;
+  }
+  .tit-m-news{
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+  .cont-m-news p{
+    height: 4rem;
+    margin-top: 0.9rem;
+    margin-bottom: 1.5rem;
+    -webkit-line-clamp: 2;
+  }
+  .cont-m-news span{
+    font-size: 1.4rem;
+    line-height: 18.2px;
+  }
+  .footer-slide{
+    padding: 1.5rem;
+  }
 }
 @media (max-width:375px){
   /* main */
